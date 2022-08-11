@@ -1,6 +1,7 @@
 # Make-Lorawan-node-with-SAMD-microcontroller-based-boards-using-LMIC-lorawan-library
 Solution to Make a Lorawan node with all SAMD microcontroller based boards using LMIC lorawan library (such as Arduino Nano IoT 33, ...)
 With this solution you are simply use arduino nano IoT and other SAMD microcontroller boards (ARM cortex family boards) in your project to gather with LMIC MCCI library project.
+
 Description --------------------------------------------------------------------------------------------------------------------------
 As  ARDUINO UNO with 32kb was not enough to put SDI12 sensor library and LMIC MCCI library to gather, but Arduino Nano IoT 33  has 256kb flash memory I used it in my project. This is an amazing solution for using LMIC library in all types of SAMD boards such as: 
 ARDUINO ZERO
@@ -30,8 +31,10 @@ Hardware equipment -------------------------------------------------------------
 Arduino nano IoT 33 board
 Related USB cable (connect board to the PC)
 Any Lorawan module (based on RFM95 radio transiver such as Lora BEE, dragino sheild,...)
+
 Software equipment -------------------------------------------------------------------------------------------------------------------------
 Arduino-IDE software
+
 Resources -----------------------------------------------------------------------------------------------------------------------
 Arduino nano 33 IoT pinout:
 https://www.etechnophiles.com/arduino-nano-33-iot-pinout-spec-board-layout/
