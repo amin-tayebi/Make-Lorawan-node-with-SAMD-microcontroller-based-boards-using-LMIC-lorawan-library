@@ -20,12 +20,12 @@ ARDUINO M0 PRO
 ARDUINO M)
 ARDUINO TIAN
 
-I used pinmap like you and leave other pins like arduino uno.:
+Pinmap used:
 const lmic_pinmap lmic_pins = {
 .nss = 6, // chip select on SAMD21 mini
 .rxtx = LMIC_UNUSED_PIN,
 .rst = LMIC_UNUSED_PIN,
-.dio = {2, 3, 4}, //DIO0, DIO1 and DIO2 connected
+.dio = {2, 3, LMIC_UNUSED_PIN}, //DIO0, DIO1 and DIO2 connected
 };
 
 Hardware equipment -------------------------------------------------------------------------------------------------------------------------
