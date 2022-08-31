@@ -38,6 +38,29 @@ Software equipment -------------------------------------------------------------
 
 Arduino-IDE software
 
+Important Notes -------------------------------------------------------------------------------------------------------------------------
+
+1) In CATENA_MCCI_LMIC_Lorawan and IBM_MCCI_LMIC_Lorawan libraries in ABP mode without change PIN it works as we put in my Github page (https://github.com/amin-tayebi):
+    .nss = 6,
+    .rxtx = LMIC_UNUSED_PIN,
+    .rst = 5,
+    .dio = {2, 3, 4},  
+
+2) In CATENA_MCCI_LMIC_Lorawan library in ABP mode in order to avoid crash you can also enable link check validation at this line:
+    LMIC_setLinkCheckMode(1);
+
+3) You can add below code because if LMIC OTAA sketch (even with Arduino uno) stop running after 1 to 30 minutes and you saw error:
+../Documents/Arduino/libraries/MCCI_LoRaWAN_LMIC_library/src/lmic/radio.c:1065
+
+
+The value 0.5 has been empirical chosen. It is possble also trying:
+1, 2, 3, 4, 5, 0.9, 0.8, 0.7, 0.6
+
+By adding this code above the line "do_send(&sendjob);" problem will be solved.
+
+// Let LMIC compensate for +/- 0.5% clock error
+LMIC_setClockError(MAX_CLOCK_ERROR * 0.5 / 100);
+ 
 Resources -----------------------------------------------------------------------------------------------------------------------
 
 Arduino nano 33 IoT pinout:
