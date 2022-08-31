@@ -30,16 +30,16 @@ typedef union LoRa_Packet {
 //now create a variable called levelinfo to hold the data
 LoRa_Packet levelinfo;
 
-//------------------------------------------------------------
-static const PROGMEM u1_t NWKSKEY[16] = { 0xF5, 0xFE, 0x72, 0x06, 0xB4, 0x1F, 0xD1, 0x33, 0x59, 0xD3, 0xEC, 0xF0, 0x0A, 0xCC, 0xCB, 0x6F };
+//------------------------------------------------------------MSB
+static const PROGMEM u1_t NWKSKEY[16] = { FILLMEIN };
 
 // LoRaWAN AppSKey, application session key
 // This is the default Semtech key, which is used by the early prototype TTN
-// network.
-static const u1_t PROGMEM APPSKEY[16] = { 0x76, 0x0F, 0x4C, 0x15, 0x3F, 0x60, 0x94, 0x8A, 0xD8, 0xB6, 0xCC, 0x95, 0x9F, 0xCD, 0x8E, 0xDB };
+// network.--------------------------------------------------MSB
+static const u1_t PROGMEM APPSKEY[16] = { FILLMEIN };
 
 // LoRaWAN end-device address (DevAddr)
-static const u4_t DEVADDR = 0x260B2114 ; // <-- Change this address for every node!
+static const u4_t DEVADDR = 0x200B2114 ; // <-- Change this address for every node!
 
 // These callbacks are only used in over-the-air activation, so they are
 // left empty here (we cannot leave them out completely unless
