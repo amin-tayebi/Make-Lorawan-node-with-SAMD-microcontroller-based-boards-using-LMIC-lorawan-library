@@ -9,7 +9,7 @@
 
 
 /** Define the SDI-12 bus */
-SDI12 mySDI12(9);
+SDI12 mySDI12(7);
 
 
 
